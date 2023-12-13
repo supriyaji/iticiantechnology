@@ -1,0 +1,1052 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #221314;
+  --second-color: #5a7184;
+  --main-color: #6e54fa;
+  --big-font: 6rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* MAIN CONTENT CODE----------------------------------------------- */
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgb(117, 163, 168)0%, rgb(0, 105, 116)100%);
+  color: #fff;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 500 !important;
+  font-size: 47px !important;
+}
+
+.header p {
+  color: white !important;
+}
+
+p {
+  font-size: 14px;
+
+  color: #333;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* WAVE CSS CODE================================================*/
+
+.waves {
+  background: linear-gradient(60deg, rgb(117, 163, 168)0%, rgb(0, 105, 116)100%);
+  background-color: blue;
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.parallax>use {
+  animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes moveForever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width:768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/* NAVBAR CSS CODE =================================*/
+
+.nav-link {
+  color: rgb(0, 0, 0);
+}
+
+.navbar::before {
+  content: " ";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  color: black !important;
+  background: linear-gradient(60deg, rgb(255, 255, 255)0%, rgb(0, 105, 116)100%);
+}
+
+/*====================== SCROLL-TOP CSS =======================*/
+.scrollTop-style {
+  position: fixed;
+  right: 4%;
+  bottom: 5%;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.scroll-top {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(0, 105, 116);
+  display: inline-block;
+  padding: 1.4rem 1.6rem;
+  color: rgb(255, 255, 255);
+  animation: water-wave 3s linear infinite;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.scroll-top i {
+  width: 50%;
+}
+
+/* SOCIAL ICON STICKY ================================================= */
+
+.social {
+  position: fixed;
+  top: 300px;
+}
+
+.social ul {
+  padding: 5px;
+  transform: translate(-270px, 0);
+}
+
+.social ul li {
+  display: block;
+  margin: 8px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 5px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.social ul li:hover a {
+  color: #000;
+}
+
+.social ul li:hover i {
+  padding: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+
+.social ul li i {
+  color: #000;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
+}
+
+/* ------------------BUTTON CSS --------------------------*/
+.bt {
+  background: transparent;
+  background-color: #ffffff;
+  text-decoration: none;
+  padding: 6px 30px;
+  color: rgb(0, 105, 116);
+  display: inline-block;
+  font-size: 1.0rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  border-radius: 50px;
+}
+
+.bt0 {
+  padding: 10px 40px;
+  background: transparent;
+  text-decoration: none;
+  padding: 6px 30px;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 252, 252);
+  display: inline-block;
+  font-size: 1.0rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  border-radius: 50px;
+
+}
+
+.btst {
+  background: transparent;
+  text-decoration: none;
+  padding: 0.6rem 7.4rem;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+
+}
+
+.bts {
+  background-color: rgb(0, 105, 116, 0.9);
+  text-decoration: none;
+  padding: 0.6rem 7.4rem;
+  color: white;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.bs {
+  background: transparent;
+  border: 1.5px solid white;
+  text-decoration: none;
+  padding: 0.1rem 4.0rem;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+
+}
+
+/* ABOUT SECTION IMAGE CSS CODE  ===================*/
+.imgg {
+  margin: auto;
+  padding-left: 50px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.imgg::before {
+  position: absolute;
+  content: "";
+  left: -20px;
+  bottom: 30px;
+  border: 3px solid rgba(13, 11, 40, 0.9);
+  width: 100%;
+  height: 100%;
+}
+
+/* 3  ICON SECTION WALA CODE== */
+
+.box {
+  width: 300px !important;
+  height: 260px !important;
+  background: var(--bg-color);
+  border: 2px solid #f0eded;
+  padding: 10px 5px;
+  border-radius: 5px;
+  transition: all 1s ease 0s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imggg img {
+  height: 85px;
+  width: 105px;
+  /* height: 85px;
+  width: 85px; */
+  padding: 15px;
+  background: var(--bg-color);
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.box p {
+  font-size: 15px;
+  color: var(--second-color);
+}
+
+.box:hover {
+  box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+  border: 1px solid transparent;
+  transform: translateY(-3px);
+}
+
+.part3 {
+  width: 100%;
+  height: 60vh;
+}
+
+.cen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QUERY PART CODE =====================================*/
+
+.part8 {
+  width: 100%;
+  height: 30vh;
+  background-image: linear-gradient(rgb(0, 77, 77, 0.6), rgb(0, 77, 77, 0.6)), url("q2.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.btss {
+
+  background: transparent;
+  border: 1.5px solid white;
+  text-decoration: none;
+  padding: 0.4rem 4.4rem;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.bst {
+  margin: auto;
+  margin: 3px 19px;
+}
+
+
+/* PROJECT PART CODE ================================================*/
+
+.cent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project .card,
+.blk {
+  border-radius: 0px !important;
+  border-bottom-right-radius: 30px !important;
+  border-top-left-radius: 30px !important;
+  height: 260px !important;
+  border: 1px solid black;
+}
+
+.project .btm {
+  margin-top: 80px;
+}
+
+.blk {
+  background-color: black !important;
+  color: white !important;
+}
+
+.imgcontact {
+  height: 100vh;
+  background: black;
+}
+
+.pp {
+  padding-left: 20px;
+}
+
+.part9 {
+  width: 80%;
+  height: 110vh;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* SERVICE PAGE=========================================== */
+
+.part6 {
+  width: 100%;
+  height: 100vh;
+  /* background-color: #eeeeee; */
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxx .inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 2px solid transparent;
+  border-left: 3px solid transparent;
+  box-sizing: border-box;
+  transition: all .8s ease;
+}
+
+
+.boxx .inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  transition: all .8s ease;
+}
+
+.boxx .inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  box-sizing: border-box;
+  transition: all .8s ease;
+}
+
+
+.boxx:hover .inner::after,
+.boxx:hover .inner::before {
+  border-color: rgb(0, 77, 77, 0.9);
+  width: 100%;
+  height: 100%;
+
+}
+
+.boxx .inner {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.boxx .inner .icon {
+  font-size: 30px;
+  color: #000 !important;
+  transition: color .8s ease;
+}
+
+.boxx .inner .icon i {
+  color: black;
+}
+
+.boxx:hover .inner .icon i {
+  color: rgb(0, 77, 77, 0.6);
+}
+
+.boxx .inner .icon h6 {
+  font-weight: normal;
+  color: #000;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+.boxx .inner .icon p {
+  font-size: 15px;
+  color: #444444;
+  line-height: 24px;
+}
+
+/*================================================== SECTION HEADING ===================================*/
+
+.heding {
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heding::before {
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 0;
+  width: 0.5rem;
+  height: 0.6rem;
+  background-color: rgb(0, 77, 77, 0.9);
+}
+
+.heding::after {
+  content: "";
+  position: absolute;
+  top: 114%;
+  left: 0.6rem;
+  min-width: 19rem;
+  height: 0.1rem;
+  background-color: rgb(0, 77, 77, 0.9);
+}
+
+/* CONTACT SECTION CSS CODE ============================================*/
+
+form {
+  padding: 10px 10px;
+}
+
+.contactinfo {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.get-in-touch {
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: black;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+  -webkit-transform: translateY(-24px);
+  transform: translateY(-24px);
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  cursor: text;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out,
+    -webkit-transform .2s ease-in-out;
+}
+
+.lastsection {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(rgb(0, 77, 77, 0.6), rgb(0, 77, 77, 0.6)), url("q2.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.bo {
+  margin: auto;
+  width: 50%;
+  height: 60vh;
+  background-color: #0a0909;
+  padding: 20px 3px;
+  border-radius: 7px;
+}
+
+
+/* CONTACT FORM CSS CODE=============================== */
+
+.login-box h6 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+/* CONTACT information CSS CODE======================== */
+
+.contactinfoo {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactinfoo .box1 {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contactinfoo .box1 .icon {
+  min-width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 22px;
+}
+
+.contactinfoo .box1 .icon i {
+  color: white;
+}
+
+.contactinfoo .box1 .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.contactinfoo .box1 .text h3 {
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+.contactinfoo .box1 .text p {
+  color: white;
+}
+
+
+.fts {
+  width: 100%;
+  height: 25vh;
+  color: white;
+  background: rgb(0, 0, 0, 0.6);
+}
+
+.fts p {
+  color: white;
+  text-align: center;
+}
+
+/* FOOTER SECTION CODE======================= */
+
+.ftr {
+  padding: 10px 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 50px 50px 20px 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(0, 0, 0);
+}
+
+.ftr span a {
+  color: rgb(0, 0, 0);
+}
+
+.ftr a i {
+  color: black;
+}
+
+.ftr a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.copyrightline {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  text-transform: capitalize;
+  background-color: black;
+}
+/* MOBILE VIEW CSS CODE  ==========================================*/
+
+@media(max-width:500px) {
+  .nav-item {
+    text-align: center !important;
+    color: #000 !important;
+    font-weight: 700;
+  }
+  .inner-header {
+    height: 70vh;
+  }
+  .flex {
+    justify-content: flex-end;
+  }
+  h1 {
+    font-weight: 400 !important;
+    font-size: 37px !important;
+  }
+  .header p {
+    padding: 2px 10px;
+  }
+  .btn {
+    padding-top: 34px;
+  }
+  .bt0 {
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
+  .content {
+    height: 10vh;
+  }
+  .part2 {
+    width: 100%;
+    height: 100vh;
+  }
+  .imgg {
+    margin: auto;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    position: relative;
+  }
+  .imgg img {
+    width: 330px;
+    margin-left: 10px;
+  }
+  .imgg::before {
+    left: -10px;
+    bottom: 30px;
+  }
+  .mid {
+    margin-bottom: 80px;
+  }
+  .box {
+    margin-bottom: 20px;
+  }
+  .part3 {
+    width: 100%;
+    height: 130vh;
+  }
+  .part8 {
+    height: 20vh;
+  }
+  .part9 {
+    width: 100%;
+    height: 150vh;
+  }
+  .project .btm {
+    margin-top: 20px;
+  }
+  .pp {
+    padding-left: 3px;
+  }
+  .pp1 {
+    padding-left: 20px;
+  }
+  .cent {
+    padding: 20px 60px;
+  }
+  .project .card,
+  .blk {
+    height: 160px !important;
+    width: 100% !important;
+  }
+  .part6 {
+    width: 100%;
+    height: 190vh;
+  }
+  .lastsection {
+    height: 130vh;
+  }
+  .bo {
+    margin: 0px;
+    width: 100%;
+  }
+  .contactinfoo {
+    margin: 0px;
+  }
+  .bst {
+    margin: auto;
+    margin: 3px 59px;
+  }
+  .ftr a {
+    padding-bottom: 20px;
+  }
+  .ftr {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .contactinfoo {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .bts {
+    /* padding: 0.6rem 8.9rem; */
+    padding: 0.6rem 8.6rem;
+  }
+  .navbar-toggler-icon{
+    background:rgb(255, 255, 255,0.7);  
+  }
+}
+
+@media(max-width:850px) and (min-width:700px) {
+  .flex {
+    justify-content: baseline;
+  }
+  .nav-item {
+    text-align: center !important;
+    font-weight: 700;
+  }
+  .inner-header {
+    height: 50vh;
+  }
+  h1 {
+    font-weight: 500 !important;
+    font-size: 47px !important;
+  }
+  .header p {
+    padding: 2px 10px;
+    font-size: 19px;
+  }
+  .content {
+    height: 10vh;
+  }
+  .imgg img {
+    width: 280px;
+    margin-left: 0px;
+  }
+  .imgg::before {
+    left: 10px;
+    bottom: 30px;
+  }
+  .imgg {
+    padding-left: 30px;
+    margin-top: 40px;
+  }
+  .part3 {
+    height: 28vh;
+  }
+  .box {
+    height: 230px !important;
+  }
+  .part8 {
+    height: 18vh;
+  }
+  .arrow {
+    padding-top: 60px;
+  }
+  .arrow h2 {
+    padding-bottom: 10px;
+  }
+  .part9 {
+    width: 100%;
+    height: 60vh;
+  }
+  .project .card,
+  .blk {
+    height: 220px !important;
+    width: 100% !important;
+  }
+  .pp {
+    padding-left: 0px;
+  }
+  .project img {
+    width: 140px;
+  }
+  .part6 {
+    height: 50vh;
+  }
+  .bo {
+    width: 100%;
+    height: 32vh;
+  }
+  .contactinfoo {
+    margin: auto;
+  }
+  .bst {
+    margin: auto;
+    margin: 3px 49px;
+  }
+  .contactinfoo {
+    padding-top: 30px;
+    width: 100%;
+
+  }
+  .lastsection {
+    height: 50vh;
+  }
+  .navbar-toggler-icon{
+    background:rgb(255, 255, 255,0.7);  
+  }
+  /* .navbar-toggler-icon {
+    /* background-color: rgb(184, 182, 182); *
+  }
+  .button{
+    border-radius: 50px;
+    border: 1px solid white;
+  }
+  .navbar-toggler{
+    /* color: white; *
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+  }
+  .navbar-toggler-icon{
+    color: white;
+    background:white;
+  } */
+}
